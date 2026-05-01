@@ -61,8 +61,10 @@
               </span>
               <span>
                 <a
+                  data-repo="portfolio"
+                  data-query="ref=home"
                   style="color: #795548"
-                  href="https://eugeniosaintemarie.github.io/portfolio?ref=home"
+                  href="#"
                   title="Portfolio"
                   ><i class="fa-solid fa-briefcase fa-2x"></i
                 ></a>
@@ -83,7 +85,7 @@
                   <footer class="BSOD-footer">
                      <img src="public/static/qr.png" class="BSOD-qr" alt="Eugenio Sainte Marie" />
                      <div class="BSOD-copyright">
-                        <p> For more information about this issue and possible fixes, visit <a style="color: #fff; text-decoration: none;" href="https://eugeniosaintemarie.github.io" >https://eugeniosaintemarie.github.io</a ></p>
+                        <p> For more information about this issue and possible fixes, visit <a style="color: #fff; text-decoration: none;" href="/" >site</a ></p>
                         <p> If you call a support person, five them this info: <br />Stop code: END OF SITE</p>
                      </div>
                   </footer>
@@ -97,6 +99,31 @@
       WebFont.load({
         google: { families: ["Roboto:900,500", "Open Sans:400"] },
       });
+    </script>
+    <script>
+      (() => {
+        const siteBaseURL = "https://eugeniosaintemarie.github.io".replace(/\/$/, "");
+
+        const buildRepoURL = (repoName, query = "") => {
+          const url = new URL(`${repoName}/`, `${siteBaseURL}/`);
+
+          if (query) {
+            url.search = query.startsWith("?") ? query : `?${query}`;
+          }
+
+          return url.toString();
+        };
+
+        document.querySelectorAll("[data-repo]").forEach((link) => {
+          const repoName = link.dataset.repo;
+
+          if (!repoName) {
+            return;
+          }
+
+          link.href = buildRepoURL(repoName, link.dataset.query || "");
+        });
+      })();
     </script>
   </body>
 </html>
