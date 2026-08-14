@@ -22,6 +22,40 @@
       gtag("js", new Date());
       gtag("config", "G-LNQ47VG50M");
     </script>
+    <style>
+      .hero-desc {
+        margin: 0;
+      }
+      .hero-line {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 5px;
+      }
+      .hero-line > a {
+        text-decoration: none;
+      }
+      .hero-line .hero-post {
+        margin: 0;
+        display: inline-block;
+        font-size: 1.5em;
+      }
+      .hero-link {
+        font-size: 1.5em;
+      }
+      .hero-link a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .hero-link a:hover {
+        text-decoration: none;
+      }
+      .hero-link a i {
+        text-decoration: none;
+      }
+    </style>
   </head>
 
   <body style="overflow: hidden !important">
@@ -48,43 +82,31 @@
               </h1>
             </a>
             <h2 class="hero-desc"></h2>
-            <a
-              style="text-decoration: none"
-              href="https://github.com/eugeniosaintemarie"
-              title="GitHub"
-            >
-              <h3 class="hero-post" id="post">></h3>
-            </a>
-            <p class="contact-social">
-              <span>
-                <!--<a
-                  style="color: #018281"
-                  href="https://eugeniosm.vercel.app?ref=home"
-                  title="Hub"
-                  ><i class="fa-solid fa-circle-nodes fa-2x"></i
-                ></a>-->
-                <a
-                  style="color: #018281"
-                  href="https://hub.eugeniosm.com?ref=home"
-                  title="Hub"
-                  ><i class="fa-solid fa-circle-nodes fa-2x"></i
-                ></a>
-              </span>
-              <span>
-                <!--<a
-                  href="https://eugeniosaintemarie.github.io/portfolio?ref=home"
-                  style="color: #795548"
-                  title="Portfolio"
-                  ><i class="fa-solid fa-briefcase fa-2x"></i
-                ></a>-->
+            <div class="hero-line">
+              <a
+                style="text-decoration: none"
+                href="https://github.com/eugeniosaintemarie"
+                title="GitHub"
+              >
+                <h3 class="hero-post" id="post">></h3>
+              </a>
+              <span class="hero-link">
                 <a
                   href="https://portfolio.eugeniosm.com?ref=home"
                   style="color: #795548"
                   title="Portfolio"
-                  ><i class="fa-solid fa-briefcase fa-2x"></i
-                ></a>
+                  ><i class="fa-solid fa-briefcase"></i> Portfolio</a
+                >
               </span>
-            </p>
+              <span class="hero-link">
+                <a
+                  href="https://notes.eugeniosm.com?ref=home"
+                  style="color: #ffc107"
+                  title="Notes"
+                  ><i class="fa-solid fa-book"></i> Notes</a
+                >
+              </span>
+            </div>
           </div>
         </div>
       </div>
